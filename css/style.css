@@ -1,0 +1,84 @@
+body, html, #whole_body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.trellis_button {
+    margin: 10px;
+    display: inline;
+    height: 56px;
+    width: 56px;
+}
+
+.row {
+    display: block;
+}
+
+.edit_pane {
+    background-color: #DADADA;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+.grid_holder_container {
+    width: 100%;
+}
+
+.grid_holder {
+    margin: 30px;
+}
+
+#type_input, #comment_input, .control {
+    margin-top: 20px;
+}
+
+.key_input {
+    margin-right: 20px;
+}
+
+.key_input input, #new_key_input {
+    width: 320px;
+}
+
+#export_btn {
+    float: right;
+}
+
+#show_import_modal_btn, #clear_all_btn, #sample_btn {
+    float: right;
+    margin-right: 20px;
+}
+
+#export_modal .modal-card,  #import_modal .modal-card{
+    width: 800px;
+    height: 500px;
+}
+
+textarea {
+
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: scroll;
+}
+
+#export_txt, #import_txt{
+    height: 80%;
+}
+
+.modal_summary_text{
+    margin: 10px;
+}
+
+.empty_config {
+  background-image: linear-gradient(
+    #EEEEEE,
+    #EEEEEE 7px,
+    #CCCCCC 7px,
+    #CCCCCC
+  );
+  background-size: 100% 14px;
+}

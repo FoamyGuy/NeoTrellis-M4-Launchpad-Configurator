@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <link href="css/bulma.css" rel="stylesheet">
+  <link rel='stylesheet' href='css/spectrum.css'/>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="whole_body" class="columns">
+
+  <div class="column is-4 left_half">
+    <div class="container grid_holder_container">
+      <div class="grid_holder"></div>
+    </div>
+  </div>
+
+  <div class="column is-8 right_half">
+    <div class="container edit_pane">
+
+      <input type='text' id="color_input"/>
+      <button id="export_btn" class="button is-success">Export</button>
+      <button id="show_import_modal_btn" class="button is-info" onclick="$('#import_modal').toggleClass('is-active');$('#import_txt').focus();">Import</button>
+      <button id="clear_all_btn" class="button is-danger">Clear All</button>
+      <button id="sample_btn" class="button is-primary">Load Sample</button>
+      <input id="type_input" class="input" placeholder="type" type="input">
+      <input id="comment_input" class="input" placeholder="comment" type="input">
+
+      <div class="field has-addons">
+        <div class="control">
+          <input id="new_key_input" class="column input" type="text" placeholder="New Key">
+        </div>
+        <div class="control">
+          <button id="new_key_btn" class="button is-info">Add New Key</button>
+        </div>
+      </div>
+
+      <div id="keys_list">
+
+      </div>
+
+      <div id="key_input_clone" class="key_input field has-addons" style="display:none">
+        <div class="control">
+          <input class="input" type="text" placeholder="Keycode">
+        </div>
+        <div class="control">
+          <a class="remove_btn button is-danger">
+            Remove
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+<div id="export_modal" class="modal">
+  <div class="modal-background" onclick="$('#export_modal').toggleClass('is-active');"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Export</p>
+      <button class="delete" aria-label="close" onclick="$('#export_modal').toggleClass('is-active');"></button>
+    </header>
+    <section class="modal-card-body">
+      <textarea id="export_txt" class="textarea" readonly></textarea>
+      <p class="modal_summary_text">Copy/paste this keymap dictionary definition into your Neo Trellis M4 code.py file.</p>
+    </section>
+    <footer class="modal-card-foot">
+      <button id="export_select_all_btn" class="button is-success">Select All</button>
+      <button id="export_modal_cancel_btn" class="button is-danger" onclick="$('#export_modal').toggleClass('is-active');">Close</button>
+    </footer>
+  </div>
+</div>
+
+<div id="import_modal" class="modal">
+  <div class="modal-background" onclick="$('#import_modal').toggleClass('is-active');"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Import</p>
+      <button class="delete" aria-label="close" onclick="$('#import_modal').toggleClass('is-active');"></button>
+    </header>
+    <section class="modal-card-body">
+      <textarea id="import_txt" class="textarea"></textarea>
+      <p class="modal_summary_text">Paste your python keymap dictionary definition from your Neo Trellis M4 code.py file into this box then press Import.</p>
+    </section>
+    <footer class="modal-card-foot">
+      <button id="import_btn" class="button is-success">Import</button>
+      <button id="import_modal_cancel_btn" class="button is-danger" onclick="$('#import_modal').toggleClass('is-active');">Close</button>
+    </footer>
+  </div>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/contrast-colors.js"></script>
+<script src="js/color_helpers.js"></script>
+<script src='js/spectrum.js'></script>
+<script src="js/original_keymap_js_obj.js"></script>
+<script src="js/original_keymap_python_str.js"></script>
+<script src="js/converters.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
